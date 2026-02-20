@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
 
-const API_URL = "http://16.171.28.75:8000";
+const API_URL = process.env.REACT_APP_API_URL;
+
 
 function App() {
   const [question, setQuestion] = useState("");
