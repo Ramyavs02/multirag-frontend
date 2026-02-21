@@ -1,19 +1,48 @@
+/* ===== Container ===== */
 .container {
   max-width: 900px;
   margin: 40px auto;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* ===== Title ===== */
 .title {
   text-align: center;
-  margin-bottom: 30px;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  background: linear-gradient(90deg, #2563eb, #1f6feb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+/* ===== Subtitle ===== */
+.subtitle {
+  text-align: center;
+  font-size: 13px;
+  color: #9CA3AF; /* Soft ash grey */
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.subtitle::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #e5e7eb;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* ===== Chat Window ===== */
 .chat-window {
   min-height: 400px;
   margin-bottom: 20px;
 }
 
+/* ===== User Bubble ===== */
 .user-bubble {
   background: #2563eb;
   color: white;
@@ -24,19 +53,22 @@
   margin-left: auto;
 }
 
+/* ===== Assistant Bubble ===== */
 .assistant-bubble {
   background: white;
   padding: 18px;
   border-radius: 18px;
   margin-bottom: 12px;
   max-width: 75%;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
 }
 
+/* ===== Answer Text ===== */
 .answer {
   margin-bottom: 10px;
 }
 
+/* ===== Badges ===== */
 .badges {
   margin-bottom: 8px;
 }
@@ -50,24 +82,34 @@
   font-size: 12px;
 }
 
+/* ===== Latency Info ===== */
 .latency {
   font-size: 13px;
   margin-bottom: 6px;
+  color: #6B7280;
 }
 
+/* ===== Input Section ===== */
 .input-section {
   display: flex;
   gap: 10px;
 }
 
+/* ===== Textarea ===== */
 textarea {
   flex: 1;
   padding: 10px;
   font-size: 15px;
   border-radius: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #d1d5db;
+  outline: none;
 }
 
+textarea:focus {
+  border-color: #2563eb;
+}
+
+/* ===== Button ===== */
 button {
   padding: 10px 18px;
   border-radius: 10px;
@@ -76,6 +118,11 @@ button {
   color: white;
   cursor: pointer;
   font-size: 15px;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #1558c0;
 }
 
 button:disabled {
