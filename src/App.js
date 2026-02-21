@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 
 
-const API_URL = "http://16.171.28.75";
+const API_URL = "https://multiragbackened-cgf3c2cpfga5h3bs.canadaeast-01.azurewebsites.net/";
 
 function App() {
   const [question, setQuestion] = useState("");
@@ -68,14 +68,15 @@ function App() {
 
   return (
     <div className="container">
-      <h1 className="title">MultiRAG Assistant</h1>
+  <h1 className="title">IntelliRAG AI</h1>
+  <p className="subtitle">Enterprise Knowledge Intelligence</p>
 
-      <div className="chat-window">
-        {messages.map((msg, index) => (
-          <div
-            key={index}
-            className={msg.role === "user" ? "user-bubble" : "assistant-bubble"}
-          >
+  <div className="chat-window">
+    {messages.map((msg, index) => (
+      <div
+        key={index}
+        className={msg.role === "user" ? "user-bubble" : "assistant-bubble"}
+      >
             {msg.role === "user" ? (
               msg.content
             ) : (
