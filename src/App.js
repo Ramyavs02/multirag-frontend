@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 
 
-const API_URL = "https://multiragbackened-cgf3c2cpfga5h3bs.canadaeast-01.azurewebsites.net/";
+const API_URL = "https://multiragbackened-cgf3c2cpfga5h3bs.canadaeast-01.azurewebsites.net";
 
 function App() {
   const [question, setQuestion] = useState("");
